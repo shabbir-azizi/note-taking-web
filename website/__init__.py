@@ -5,6 +5,10 @@ def creat_app():
     app.config['SECRET_KEY'] ='ooribbahs'
 
 
-    return app
+    from . views import view
+    from .auth import auth
 
+    app.register_blueprint(views, url_prefix='/')
+    app.register_blueprint(auth, url_prefix='/')
+    return app
 
