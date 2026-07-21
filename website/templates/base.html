@@ -20,24 +20,27 @@
     <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <buttom 
-        class="navbar-toggle"
+        class="navbar-toggler"
         type="button" 
         data -toggle="collapes" 
-        data-target="#navbar">
+        data-target="#navbar"
+        >
         <span class="navbar-toggler-icon"></span>
 
         </button>
-        <div class="collapde navbar-collapse " id="navbar">
+        <div class="collapde navbar-collapse" id="navbar">
             <div class="navbar-nav">
                 <a class="nav-item nav-link" id="login" href="/login">login</a>
                 <a class="nav-item nav-link" id="signUp" href="/sign-Up">sign Up</a>
                 <a class="nav-item nav-link" id="logout" href="/logout">logout</a>
                 <a class="nav-item nav-link" id="home" href="/">Homr</a>
-
             </div>
         </div>
     </nav>
-
+    <div class="container">
+    {% block content %}
+    {% andblock %}
+    </div>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
